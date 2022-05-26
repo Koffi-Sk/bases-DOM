@@ -124,3 +124,20 @@ form.addEventListener("submit", (e) => {
     alert("Veuillez cocher les CGV");
   }
 });
+
+// Load event
+
+window.addEventListener("load", () => {
+  console.log("document chargé !");
+});
+
+// ForEach
+
+// const boxes = document.getElementsByClassName("box");
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.7)";
+  });
+});
