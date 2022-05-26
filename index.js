@@ -29,3 +29,34 @@ btn2.addEventListener("click", () => {
 
 // Priorité des classes et balises
 /* <div> > #id > .class > baliseHTML */
+
+//--------------------------------------------
+// MOUSEMOVE
+const mousemove = document.querySelector(".mousemove");
+
+window.addEventListener("mousemove", (e) => {
+  mousemove.style.left = e.pageX + "px";
+  mousemove.style.top = e.pageY + "px";
+});
+
+mousemove.addEventListener("mousedown", (e) => {
+  mousemove.style.transform = "scale(2) translate(-25%, -25%)";
+  mousemove.style.border = "3px double teal";
+});
+
+mousemove.addEventListener("mouseup", (e) => {
+  mousemove.style.transform = "scale(1) translate(-50%, -50%)";
+});
+
+questionContainer.addEventListener("mouseenter", () => {
+  questionContainer.style.background = "rgba(3,3,3, 0.7";
+});
+
+// mouseleave aussi quand la souris s'arrete
+questionContainer.addEventListener("mouseout", () => {
+  questionContainer.style.background = "pink";
+});
+
+response.addEventListener("mouseover", () => {
+  response.style.transform = "rotate(2deg)";
+});
